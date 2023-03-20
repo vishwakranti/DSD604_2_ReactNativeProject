@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View,Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
+import Quiz from "./src/components/quiz";
 const BottomTab = createBottomTabNavigator();
 
 function HomeScreen() {
@@ -31,7 +31,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <BottomTab.Navigator>
-        <BottomTab.Screen name="Home" component={HomeScreen} />
+        <BottomTab.Screen name="Quiz" component={Quiz} />
         <BottomTab.Screen name="Weather" component={WeatherApi} />
         <BottomTab.Screen name="Database" component={WrongCityDatabase} />
       </BottomTab.Navigator>
