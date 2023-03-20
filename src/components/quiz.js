@@ -27,9 +27,8 @@ const Quiz = () => {
         let randomNum = Math.floor(Math.random() * (quizData.length - 0 + 1)) + 0;
         let randomQuizData = quizData[randomNum];
         setQuizDataSet({ Country: randomQuizData.Country, Capital: randomQuizData.Capital });
-        setCountry(randomQuizData.Country);
+        setCountry("What is the capital of " + randomQuizData.Country + "?");
         setCapital(randomQuizData.Capital);
-        //setQuestionLabel({ Country: quizData[randomNum].Country, Hint: quizData[randomNum].Country});
     }
     const handleSelectValueChange = (item, idx) => {
         console.log('select value changed to: ', item);
