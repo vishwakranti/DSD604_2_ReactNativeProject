@@ -1,990 +1,811 @@
 export const quizData =[
     {
-      "COUNTRY": "Afghanistan",
-      "CONTINENT": "Asia"
+      "Country": "Afghanistan",
+      "Capital": "Kabul"
     },
     {
-      "COUNTRY": "Aland Islands",
-      "CONTINENT": "Europe"
+      "Country": "Albania",
+      "Capital": "Tirana (Tirane)"
     },
     {
-      "COUNTRY": "Albania",
-      "CONTINENT": "Europe"
+      "Country": "Algeria",
+      "Capital": "Algiers"
     },
     {
-      "COUNTRY": "Algeria",
-      "CONTINENT": "Africa"
+      "Country": "Andorra",
+      "Capital": "Andorra la Vella"
     },
     {
-      "COUNTRY": "American Samoa",
-      "CONTINENT": "Australia/Oceania"
+      "Country": "Angola",
+      "Capital": "Luanda"
     },
     {
-      "COUNTRY": "Andorra",
-      "CONTINENT": "Europe"
+      "Country": "Antigua and Barbuda",
+      "Capital": "Saint John's"
     },
     {
-      "COUNTRY": "Angola",
-      "CONTINENT": "Africa"
+      "Country": "Argentina",
+      "Capital": "Buenos Aires"
     },
     {
-      "COUNTRY": "Anguilla",
-      "CONTINENT": "North & Central America"
+      "Country": "Armenia",
+      "Capital": "Yerevan"
     },
     {
-      "COUNTRY": "Antarctica",
-      "CONTINENT": "Antarctica"
+      "Country": "Australia",
+      "Capital": "Canberra"
     },
     {
-      "COUNTRY": "Antigua and Barbuda",
-      "CONTINENT": "North & Central America"
+      "Country": "Austria",
+      "Capital": "Vienna"
     },
     {
-      "COUNTRY": "Argentina",
-      "CONTINENT": "South America"
+      "Country": "Azerbaijan",
+      "Capital": "Baku"
     },
     {
-      "COUNTRY": "Armenia",
-      "CONTINENT": "Asia"
+      "Country": "Bahamas",
+      "Capital": "Nassau"
     },
     {
-      "COUNTRY": "Aruba",
-      "CONTINENT": "North & Central America"
+      "Country": "Bahrain",
+      "Capital": "Manama"
     },
     {
-      "COUNTRY": "Australia",
-      "CONTINENT": "Australia/Oceania"
+      "Country": "Bangladesh",
+      "Capital": "Dhaka"
     },
     {
-      "COUNTRY": "Austria",
-      "CONTINENT": "Europe"
+      "Country": "Barbados",
+      "Capital": "Bridgetown"
     },
     {
-      "COUNTRY": "Azerbaijan",
-      "CONTINENT": "Asia"
+      "Country": "Belarus",
+      "Capital": "Minsk"
     },
     {
-      "COUNTRY": "Bahamas",
-      "CONTINENT": "North & Central America"
+      "Country": "Belgium",
+      "Capital": "Brussels"
     },
     {
-      "COUNTRY": "Bahrain",
-      "CONTINENT": "Asia"
+      "Country": "Belize",
+      "Capital": "Belmopan"
     },
     {
-      "COUNTRY": "Bangladesh",
-      "CONTINENT": "Asia"
+      "Country": "Benin",
+      "Capital": "Porto Novo[1]"
     },
     {
-      "COUNTRY": "Barbados",
-      "CONTINENT": "North & Central America"
+      "Country": "Bhutan",
+      "Capital": "Thimphu"
     },
     {
-      "COUNTRY": "Belarus",
-      "CONTINENT": "Europe"
+      "Country": "Bolivia",
+      "Capital": "La Paz (administrative), Sucre (official)[2]"
     },
     {
-      "COUNTRY": "Belgium",
-      "CONTINENT": "Europe"
+      "Country": "Bosnia and Herzegovina",
+      "Capital": "Sarajevo"
     },
     {
-      "COUNTRY": "Belize",
-      "CONTINENT": "North & Central America"
+      "Country": "Botswana",
+      "Capital": "Gaborone"
     },
     {
-      "COUNTRY": "Benin",
-      "CONTINENT": "Africa"
+      "Country": "Brazil",
+      "Capital": "Brasilia"
     },
     {
-      "COUNTRY": "Bermuda",
-      "CONTINENT": "North & Central America"
+      "Country": "Brunei",
+      "Capital": "Bandar Seri Begawan"
     },
     {
-      "COUNTRY": "Bhutan",
-      "CONTINENT": "Asia"
+      "Country": "Bulgaria",
+      "Capital": "Sofia"
     },
     {
-      "COUNTRY": "Bolivia",
-      "CONTINENT": "South America"
+      "Country": "Burkina Faso",
+      "Capital": "Ouagadougou"
     },
     {
-      "COUNTRY": "Bosnia and Herzegovina",
-      "CONTINENT": "Europe"
+      "Country": "Burundi",
+      "Capital": "Gitega[3]"
     },
     {
-      "COUNTRY": "Botswana",
-      "CONTINENT": "Africa"
+      "Country": "Cambodia",
+      "Capital": "Phnom Penh"
     },
     {
-      "COUNTRY": "Bouvet Island",
-      "CONTINENT": "Antarctica"
+      "Country": "Cameroon",
+      "Capital": "Yaounde"
     },
     {
-      "COUNTRY": "Brazil",
-      "CONTINENT": "South America"
+      "Country": "Canada",
+      "Capital": "Ottawa"
     },
     {
-      "COUNTRY": "British Indian Ocean Territory",
-      "CONTINENT": "Asia"
+      "Country": "Cape Verde",
+      "Capital": "Praia"
     },
     {
-      "COUNTRY": "British Virgin Islands",
-      "CONTINENT": "North & Central America"
+      "Country": "Central African Republic",
+      "Capital": "Bangui"
     },
     {
-      "COUNTRY": "Brunei Darussalam",
-      "CONTINENT": "Asia"
+      "Country": "Chad",
+      "Capital": "N'Djamena"
     },
     {
-      "COUNTRY": "Bulgaria",
-      "CONTINENT": "Europe"
+      "Country": "Chile",
+      "Capital": "Santiago"
     },
     {
-      "COUNTRY": "Burkina Faso",
-      "CONTINENT": "Africa"
+      "Country": "China",
+      "Capital": "Beijing"
     },
     {
-      "COUNTRY": "Burundi",
-      "CONTINENT": "Africa"
+      "Country": "Colombia",
+      "Capital": "Bogota"
     },
     {
-      "COUNTRY": "Cambodia",
-      "CONTINENT": "Asia"
+      "Country": "Comoros",
+      "Capital": "Moroni"
     },
     {
-      "COUNTRY": "Cameroon",
-      "CONTINENT": "Africa"
+      "Country": "Congo, Democratic Republic of the",
+      "Capital": "Kinshasa"
     },
     {
-      "COUNTRY": "Canada",
-      "CONTINENT": "North & Central America"
+      "Country": "Congo, Republic of the",
+      "Capital": "Brazzaville"
     },
     {
-      "COUNTRY": "Cape Verde",
-      "CONTINENT": "Africa"
+      "Country": "Costa Rica",
+      "Capital": "San Jose"
     },
     {
-      "COUNTRY": "Cayman Islands",
-      "CONTINENT": "North & Central America"
+      "Country": "Côte d'Ivoire (Ivory Coast)",
+      "Capital": "Yamoussoukro[4]"
     },
     {
-      "COUNTRY": "Central African Republic",
-      "CONTINENT": "Africa"
+      "Country": "Croatia",
+      "Capital": "Zagreb"
     },
     {
-      "COUNTRY": "Chad",
-      "CONTINENT": "Africa"
+      "Country": "Cuba",
+      "Capital": "Havana"
     },
     {
-      "COUNTRY": "Chile",
-      "CONTINENT": "South America"
+      "Country": "Cyprus",
+      "Capital": "Nicosia"
     },
     {
-      "COUNTRY": "China",
-      "CONTINENT": "Asia"
+      "Country": "Czech Republic (Czechia)[5]",
+      "Capital": "Prague"
     },
     {
-      "COUNTRY": "Christmas Island",
-      "CONTINENT": "Asia"
+      "Country": "Denmark",
+      "Capital": "Copenhagen"
     },
     {
-      "COUNTRY": "Cocos (Keeling) Islands",
-      "CONTINENT": "Asia"
+      "Country": "Djibouti",
+      "Capital": "Djibouti"
     },
     {
-      "COUNTRY": "Colombia",
-      "CONTINENT": "South America"
+      "Country": "Dominica",
+      "Capital": "Roseau"
     },
     {
-      "COUNTRY": "Comoros",
-      "CONTINENT": "Africa"
+      "Country": "Dominican Republic",
+      "Capital": "Santo Domingo"
     },
     {
-      "COUNTRY": "Congo",
-      "CONTINENT": "Africa"
+      "Country": "East Timor",
+      "Capital": "Dili"
     },
     {
-      "COUNTRY": "Congo, Democratic Republic of the",
-      "CONTINENT": "Africa"
+      "Country": "Ecuador",
+      "Capital": "Quito"
     },
     {
-      "COUNTRY": "Cook Islands",
-      "CONTINENT": "Australia/Oceania"
+      "Country": "Egypt",
+      "Capital": "Cairo"
     },
     {
-      "COUNTRY": "Costa Rica",
-      "CONTINENT": "North & Central America"
+      "Country": "El Salvador",
+      "Capital": "San Salvador"
     },
     {
-      "COUNTRY": "Croatia",
-      "CONTINENT": "Europe"
+      "Country": "England[6]",
+      "Capital": "London"
     },
     {
-      "COUNTRY": "Cuba",
-      "CONTINENT": "North & Central America"
+      "Country": "Equatorial Guinea",
+      "Capital": "Malabo"
     },
     {
-      "COUNTRY": "Cyprus",
-      "CONTINENT": "Asia"
+      "Country": "Eritrea",
+      "Capital": "Asmara"
     },
     {
-      "COUNTRY": "Czechia",
-      "CONTINENT": "Europe"
+      "Country": "Estonia",
+      "Capital": "Tallinn"
     },
     {
-      "COUNTRY": "Denmark",
-      "CONTINENT": "Europe"
+      "Country": "Eswatini (Swaziland)[7]",
+      "Capital": "Mbabana[8]"
     },
     {
-      "COUNTRY": "Djibouti",
-      "CONTINENT": "Africa"
+      "Country": "Ethiopia",
+      "Capital": "Addis Ababa"
     },
     {
-      "COUNTRY": "Dominica",
-      "CONTINENT": "North & Central America"
+      "Country": "Federated States of Micronesia",
+      "Capital": "Palikir"
     },
     {
-      "COUNTRY": "Dominican Republic",
-      "CONTINENT": "North & Central America"
+      "Country": "Fiji",
+      "Capital": "Suva"
     },
     {
-      "COUNTRY": "East Timor",
-      "CONTINENT": "Asia"
+      "Country": "Finland",
+      "Capital": "Helsinki"
     },
     {
-      "COUNTRY": "Ecuador",
-      "CONTINENT": "South America"
+      "Country": "France",
+      "Capital": "Paris"
     },
     {
-      "COUNTRY": "Egypt",
-      "CONTINENT": "Africa"
+      "Country": "Gabon",
+      "Capital": "Libreville"
     },
     {
-      "COUNTRY": "El Salvador",
-      "CONTINENT": "North & Central America"
+      "Country": "Gambia",
+      "Capital": "Banjul"
     },
     {
-      "COUNTRY": "Equatorial Guinea",
-      "CONTINENT": "Africa"
+      "Country": "Georgia",
+      "Capital": "Tbilisi"
     },
     {
-      "COUNTRY": "Eritrea",
-      "CONTINENT": "Africa"
+      "Country": "Germany",
+      "Capital": "Berlin"
     },
     {
-      "COUNTRY": "Estonia",
-      "CONTINENT": "Europe"
+      "Country": "Ghana",
+      "Capital": "Accra"
     },
     {
-      "COUNTRY": "Ethiopia",
-      "CONTINENT": "Africa"
+      "Country": "Greece",
+      "Capital": "Athens"
     },
     {
-      "COUNTRY": "Falkland Islands",
-      "CONTINENT": "South America"
+      "Country": "Grenada",
+      "Capital": "Saint George's"
     },
     {
-      "COUNTRY": "Faroe Islands",
-      "CONTINENT": "Europe"
+      "Country": "Guatemala",
+      "Capital": "Guatemala City"
     },
     {
-      "COUNTRY": "Fiji",
-      "CONTINENT": "Australia/Oceania"
+      "Country": "Guinea",
+      "Capital": "Conakry"
     },
     {
-      "COUNTRY": "Finland",
-      "CONTINENT": "Europe"
+      "Country": "Guinea-Bissau",
+      "Capital": "Bissau"
     },
     {
-      "COUNTRY": "France",
-      "CONTINENT": "Europe"
+      "Country": "Guyana",
+      "Capital": "Georgetown"
     },
     {
-      "COUNTRY": "French Guiana",
-      "CONTINENT": "South America"
+      "Country": "Haiti",
+      "Capital": "Port au Prince"
     },
     {
-      "COUNTRY": "French Polynesia",
-      "CONTINENT": "Australia/Oceania"
+      "Country": "Honduras",
+      "Capital": "Tegucigalpa"
     },
     {
-      "COUNTRY": "French Southern Territories",
-      "CONTINENT": "Antarctica"
+      "Country": "Hungary",
+      "Capital": "Budapest"
     },
     {
-      "COUNTRY": "Gabon",
-      "CONTINENT": "Africa"
+      "Country": "Iceland",
+      "Capital": "Reykjavik"
     },
     {
-      "COUNTRY": "Gambia",
-      "CONTINENT": "Africa"
+      "Country": "India",
+      "Capital": "New Delhi"
     },
     {
-      "COUNTRY": "Georgia",
-      "CONTINENT": "Asia"
+      "Country": "Indonesia",
+      "Capital": "Jakarta[9]"
     },
     {
-      "COUNTRY": "Germany",
-      "CONTINENT": "Europe"
+      "Country": "Iran",
+      "Capital": "Tehran"
     },
     {
-      "COUNTRY": "Ghana",
-      "CONTINENT": "Africa"
+      "Country": "Iraq",
+      "Capital": "Baghdad"
     },
     {
-      "COUNTRY": "Gibraltar",
-      "CONTINENT": "Europe"
+      "Country": "Ireland",
+      "Capital": "Dublin"
     },
     {
-      "COUNTRY": "Greece",
-      "CONTINENT": "Europe"
+      "Country": "Israel",
+      "Capital": "Jerusalem (very limited international recognition)[10]"
     },
     {
-      "COUNTRY": "Greenland",
-      "CONTINENT": "North & Central America"
+      "Country": "Italy",
+      "Capital": "Rome"
     },
     {
-      "COUNTRY": "Grenada",
-      "CONTINENT": "North & Central America"
+      "Country": "Jamaica",
+      "Capital": "Kingston"
     },
     {
-      "COUNTRY": "Guadeloupe",
-      "CONTINENT": "North & Central America"
+      "Country": "Japan",
+      "Capital": "Tokyo"
     },
     {
-      "COUNTRY": "Guam",
-      "CONTINENT": "Australia/Oceania"
+      "Country": "Jordan",
+      "Capital": "Amman"
     },
     {
-      "COUNTRY": "Guatemala",
-      "CONTINENT": "North & Central America"
+      "Country": "Kazakhstan",
+      "Capital": "Astana[11]"
     },
     {
-      "COUNTRY": "Guernsey",
-      "CONTINENT": "Europe"
+      "Country": "Kenya",
+      "Capital": "Nairobi"
     },
     {
-      "COUNTRY": "Guinea",
-      "CONTINENT": "Africa"
+      "Country": "Kiribati",
+      "Capital": "Tarawa Atoll"
     },
     {
-      "COUNTRY": "Guinea-Bissau",
-      "CONTINENT": "Africa"
+      "Country": "Kosovo",
+      "Capital": "Pristina"
     },
     {
-      "COUNTRY": "Guyana",
-      "CONTINENT": "South America"
+      "Country": "Kuwait",
+      "Capital": "Kuwait City"
     },
     {
-      "COUNTRY": "Haiti",
-      "CONTINENT": "North & Central America"
+      "Country": "Kyrgyzstan",
+      "Capital": "Bishkek"
     },
     {
-      "COUNTRY": "Heard Island and Mcdonald Islands",
-      "CONTINENT": "Antarctica"
+      "Country": "Laos",
+      "Capital": "Vientiane"
     },
     {
-      "COUNTRY": "Honduras",
-      "CONTINENT": "North & Central America"
+      "Country": "Latvia",
+      "Capital": "Riga"
     },
     {
-      "COUNTRY": "Hong Kong, Special Administrative Region",
-      "CONTINENT": "Asia"
+      "Country": "Lebanon",
+      "Capital": "Beirut"
     },
     {
-      "COUNTRY": "Hungary",
-      "CONTINENT": "Europe"
+      "Country": "Lesotho",
+      "Capital": "Maseru"
     },
     {
-      "COUNTRY": "Iceland",
-      "CONTINENT": "Europe"
+      "Country": "Liberia",
+      "Capital": "Monrovia"
     },
     {
-      "COUNTRY": "India",
-      "CONTINENT": "Asia"
+      "Country": "Libya",
+      "Capital": "Tripoli"
     },
     {
-      "COUNTRY": "Indonesia",
-      "CONTINENT": "Asia"
+      "Country": "Liechtenstein",
+      "Capital": "Vaduz"
     },
     {
-      "COUNTRY": "Iran",
-      "CONTINENT": "Asia"
+      "Country": "Lithuania",
+      "Capital": "Vilnius"
     },
     {
-      "COUNTRY": "Iraq",
-      "CONTINENT": "Asia"
+      "Country": "Luxembourg",
+      "Capital": "Luxembourg"
     },
     {
-      "COUNTRY": "Ireland",
-      "CONTINENT": "Europe"
+      "Country": "Madagascar",
+      "Capital": "Antananarivo"
     },
     {
-      "COUNTRY": "Isle of Man",
-      "CONTINENT": "Europe"
+      "Country": "Malawi",
+      "Capital": "Lilongwe"
     },
     {
-      "COUNTRY": "Israel",
-      "CONTINENT": "Asia"
+      "Country": "Malaysia",
+      "Capital": "Kuala Lumpur[12]"
     },
     {
-      "COUNTRY": "Italy",
-      "CONTINENT": "Europe"
+      "Country": "Maldives",
+      "Capital": "Male"
     },
     {
-      "COUNTRY": "Ivory Coast",
-      "CONTINENT": "Africa"
+      "Country": "Mali",
+      "Capital": "Bamako"
     },
     {
-      "COUNTRY": "Jamaica",
-      "CONTINENT": "North & Central America"
+      "Country": "Malta",
+      "Capital": "Valletta"
     },
     {
-      "COUNTRY": "Japan",
-      "CONTINENT": "Asia"
+      "Country": "Marshall Islands",
+      "Capital": "Majuro"
     },
     {
-      "COUNTRY": "Jersey",
-      "CONTINENT": "Europe"
+      "Country": "Mauritania",
+      "Capital": "Nouakchott"
     },
     {
-      "COUNTRY": "Jordan",
-      "CONTINENT": "Asia"
+      "Country": "Mauritius",
+      "Capital": "Port Louis"
     },
     {
-      "COUNTRY": "Kazakhstan",
-      "CONTINENT": "Asia"
+      "Country": "Mexico",
+      "Capital": "Mexico City"
     },
     {
-      "COUNTRY": "Kenya",
-      "CONTINENT": "Africa"
+      "Country": "Moldova",
+      "Capital": "Chisinau"
     },
     {
-      "COUNTRY": "Kiribati",
-      "CONTINENT": "Australia/Oceania"
+      "Country": "Monaco",
+      "Capital": "Monaco"
     },
     {
-      "COUNTRY": "Kosovo",
-      "CONTINENT": "Europe"
+      "Country": "Mongolia",
+      "Capital": "Ulaanbaatar"
     },
     {
-      "COUNTRY": "Kuwait",
-      "CONTINENT": "Asia"
+      "Country": "Montenegro",
+      "Capital": "Podgorica"
     },
     {
-      "COUNTRY": "Kyrgyzstan",
-      "CONTINENT": "Asia"
+      "Country": "Morocco",
+      "Capital": "Rabat"
     },
     {
-      "COUNTRY": "Laos",
-      "CONTINENT": "Asia"
+      "Country": "Mozambique",
+      "Capital": "Maputo"
     },
     {
-      "COUNTRY": "Latvia",
-      "CONTINENT": "Europe"
+      "Country": "Myanmar (Burma)",
+      "Capital": "Nay Pyi Taw[13]"
     },
     {
-      "COUNTRY": "Lebanon",
-      "CONTINENT": "Asia"
+      "Country": "Namibia",
+      "Capital": "Windhoek"
     },
     {
-      "COUNTRY": "Lesotho",
-      "CONTINENT": "Africa"
+      "Country": "Nauru",
+      "Capital": "No official capital"
     },
     {
-      "COUNTRY": "Liberia",
-      "CONTINENT": "Africa"
+      "Country": "Nepal",
+      "Capital": "Kathmandu"
     },
     {
-      "COUNTRY": "Libya",
-      "CONTINENT": "Africa"
+      "Country": "Netherlands",
+      "Capital": "Amsterdam[14]"
     },
     {
-      "COUNTRY": "Liechtenstein",
-      "CONTINENT": "Europe"
+      "Country": "New Zealand",
+      "Capital": "Wellington"
     },
     {
-      "COUNTRY": "Lithuania",
-      "CONTINENT": "Europe"
+      "Country": "Nicaragua",
+      "Capital": "Managua"
     },
     {
-      "COUNTRY": "Luxembourg",
-      "CONTINENT": "Europe"
+      "Country": "Niger",
+      "Capital": "Niamey"
     },
     {
-      "COUNTRY": "Macao, Special Administrative Region of",
-      "CONTINENT": "Asia"
+      "Country": "Nigeria",
+      "Capital": "Abuja"
     },
     {
-      "COUNTRY": "Madagascar",
-      "CONTINENT": "Africa"
+      "Country": "North Korea",
+      "Capital": "Pyongyang"
     },
     {
-      "COUNTRY": "Malawi",
-      "CONTINENT": "Africa"
+      "Country": "North Macedonia (Macedonia)[15]",
+      "Capital": "Skopje"
     },
     {
-      "COUNTRY": "Malaysia",
-      "CONTINENT": "Asia"
+      "Country": "Northern Ireland[16]",
+      "Capital": "Belfast"
     },
     {
-      "COUNTRY": "Maldives",
-      "CONTINENT": "Asia"
+      "Country": "Norway",
+      "Capital": "Oslo"
     },
     {
-      "COUNTRY": "Mali",
-      "CONTINENT": "Africa"
+      "Country": "Oman",
+      "Capital": "Muscat"
     },
     {
-      "COUNTRY": "Malta",
-      "CONTINENT": "Europe"
+      "Country": "Pakistan",
+      "Capital": "Islamabad"
     },
     {
-      "COUNTRY": "Marshall Islands",
-      "CONTINENT": "Australia/Oceania"
+      "Country": "Palau",
+      "Capital": "Melekeok"
     },
     {
-      "COUNTRY": "Martinique",
-      "CONTINENT": "North & Central America"
+      "Country": "Palestine[17]",
+      "Capital": "Jerusalem (very limited international recognition)[18]"
     },
     {
-      "COUNTRY": "Mauritania",
-      "CONTINENT": "Africa"
+      "Country": "Panama",
+      "Capital": "Panama City"
     },
     {
-      "COUNTRY": "Mauritius",
-      "CONTINENT": "Africa"
+      "Country": "Papua New Guinea",
+      "Capital": "Port Moresby"
     },
     {
-      "COUNTRY": "Mayotte",
-      "CONTINENT": "Africa"
+      "Country": "Paraguay",
+      "Capital": "Asuncion"
     },
     {
-      "COUNTRY": "Mexico",
-      "CONTINENT": "North & Central America"
+      "Country": "Peru",
+      "Capital": "Lima"
     },
     {
-      "COUNTRY": "Micronesia, Federated States of",
-      "CONTINENT": "Australia/Oceania"
+      "Country": "Philippines",
+      "Capital": "Manila"
     },
     {
-      "COUNTRY": "Moldova",
-      "CONTINENT": "Europe"
+      "Country": "Poland",
+      "Capital": "Warsaw"
     },
     {
-      "COUNTRY": "Monaco",
-      "CONTINENT": "Europe"
+      "Country": "Portugal",
+      "Capital": "Lisbon"
     },
     {
-      "COUNTRY": "Mongolia",
-      "CONTINENT": "Asia"
+      "Country": "Qatar",
+      "Capital": "Doha"
     },
     {
-      "COUNTRY": "Montenegro",
-      "CONTINENT": "Europe"
+      "Country": "Romania",
+      "Capital": "Bucharest"
     },
     {
-      "COUNTRY": "Montserrat",
-      "CONTINENT": "North & Central America"
+      "Country": "Russia",
+      "Capital": "Moscow"
     },
     {
-      "COUNTRY": "Morocco",
-      "CONTINENT": "Africa"
+      "Country": "Rwanda",
+      "Capital": "Kigali"
     },
     {
-      "COUNTRY": "Mozambique",
-      "CONTINENT": "Africa"
+      "Country": "Saint Kitts and Nevis",
+      "Capital": "Basseterre"
     },
     {
-      "COUNTRY": "Myanmar",
-      "CONTINENT": "Asia"
+      "Country": "Saint Lucia",
+      "Capital": "Castries"
     },
     {
-      "COUNTRY": "Namibia",
-      "CONTINENT": "Africa"
+      "Country": "Saint Vincent and the Grenadines",
+      "Capital": "Kingstown"
     },
     {
-      "COUNTRY": "Nauru",
-      "CONTINENT": "Australia/Oceania"
+      "Country": "Samoa",
+      "Capital": "Apia"
     },
     {
-      "COUNTRY": "Nepal",
-      "CONTINENT": "Asia"
+      "Country": "San Marino",
+      "Capital": "San Marino"
     },
     {
-      "COUNTRY": "Netherlands",
-      "CONTINENT": "Europe"
+      "Country": "Sao Tome and Principe",
+      "Capital": "Sao Tome"
     },
     {
-      "COUNTRY": "New Caledonia",
-      "CONTINENT": "Australia/Oceania"
+      "Country": "Saudi Arabia",
+      "Capital": "Riyadh"
     },
     {
-      "COUNTRY": "New Zealand",
-      "CONTINENT": "Australia/Oceania"
+      "Country": "Scotland[19]",
+      "Capital": "Edinburgh"
     },
     {
-      "COUNTRY": "Nicaragua",
-      "CONTINENT": "North & Central America"
+      "Country": "Senegal",
+      "Capital": "Dakar"
     },
     {
-      "COUNTRY": "Niger",
-      "CONTINENT": "Africa"
+      "Country": "Serbia",
+      "Capital": "Belgrade"
     },
     {
-      "COUNTRY": "Nigeria",
-      "CONTINENT": "Africa"
+      "Country": "Seychelles",
+      "Capital": "Victoria"
     },
     {
-      "COUNTRY": "Niue",
-      "CONTINENT": "Australia/Oceania"
+      "Country": "Sierra Leone",
+      "Capital": "Freetown"
     },
     {
-      "COUNTRY": "Norfolk Island",
-      "CONTINENT": "Australia/Oceania"
+      "Country": "Singapore",
+      "Capital": "Singapore"
     },
     {
-      "COUNTRY": "North Korea",
-      "CONTINENT": "Asia"
+      "Country": "Slovakia",
+      "Capital": "Bratislava"
     },
     {
-      "COUNTRY": "North Macedonia",
-      "CONTINENT": "Europe"
+      "Country": "Slovenia",
+      "Capital": "Ljubljana"
     },
     {
-      "COUNTRY": "Northern Mariana Islands",
-      "CONTINENT": "Australia/Oceania"
+      "Country": "Solomon Islands",
+      "Capital": "Honiara"
     },
     {
-      "COUNTRY": "Norway",
-      "CONTINENT": "Europe"
+      "Country": "Somalia",
+      "Capital": "Mogadishu"
     },
     {
-      "COUNTRY": "Oman",
-      "CONTINENT": "Asia"
+      "Country": "South Africa",
+      "Capital": "Pretoria, Bloemfontein, Cape Town[20]"
     },
     {
-      "COUNTRY": "Pakistan",
-      "CONTINENT": "Asia"
+      "Country": "South Korea",
+      "Capital": "Seoul"
     },
     {
-      "COUNTRY": "Palau",
-      "CONTINENT": "Australia/Oceania"
+      "Country": "South Sudan",
+      "Capital": "Juba"
     },
     {
-      "COUNTRY": "Palestine",
-      "CONTINENT": "Asia"
+      "Country": "Spain",
+      "Capital": "Madrid"
     },
     {
-      "COUNTRY": "Panama",
-      "CONTINENT": "North & Central America"
+      "Country": "Sri Lanka",
+      "Capital": "Sri Jayawardenapura Kotte[21]"
     },
     {
-      "COUNTRY": "Papua New Guinea",
-      "CONTINENT": "Australia/Oceania"
+      "Country": "Sudan",
+      "Capital": "Khartoum"
     },
     {
-      "COUNTRY": "Paraguay",
-      "CONTINENT": "South America"
+      "Country": "Suriname",
+      "Capital": "Paramaribo"
     },
     {
-      "COUNTRY": "Peru",
-      "CONTINENT": "South America"
+      "Country": "Sweden",
+      "Capital": "Stockholm"
     },
     {
-      "COUNTRY": "Philippines",
-      "CONTINENT": "Asia"
+      "Country": "Switzerland",
+      "Capital": "Bern"
     },
     {
-      "COUNTRY": "Pitcairn Islands",
-      "CONTINENT": "Australia/Oceania"
+      "Country": "Syria",
+      "Capital": "Damascus"
     },
     {
-      "COUNTRY": "Poland",
-      "CONTINENT": "Europe"
+      "Country": "Taiwan[22]",
+      "Capital": "Taipei"
     },
     {
-      "COUNTRY": "Portugal",
-      "CONTINENT": "Europe"
+      "Country": "Tajikistan",
+      "Capital": "Dushanbe"
     },
     {
-      "COUNTRY": "Puerto Rico",
-      "CONTINENT": "North & Central America"
+      "Country": "Tanzania",
+      "Capital": "Dodoma[23]"
     },
     {
-      "COUNTRY": "Qatar",
-      "CONTINENT": "Asia"
+      "Country": "Thailand",
+      "Capital": "Bangkok"
     },
     {
-      "COUNTRY": "Reunion",
-      "CONTINENT": "Africa"
+      "Country": "Togo",
+      "Capital": "Lome"
     },
     {
-      "COUNTRY": "Romania",
-      "CONTINENT": "Europe"
+      "Country": "Tonga",
+      "Capital": "Nuku'alofa"
     },
     {
-      "COUNTRY": "Russian Federation",
-      "CONTINENT": "Asia,Europe"
+      "Country": "Trinidad and Tobago",
+      "Capital": "Port of Spain"
     },
     {
-      "COUNTRY": "Rwanda",
-      "CONTINENT": "Africa"
+      "Country": "Tunisia",
+      "Capital": "Tunis"
     },
     {
-      "COUNTRY": "Saint Barthelemy",
-      "CONTINENT": "North & Central America"
+      "Country": "Türkiye (Turkey)[24]",
+      "Capital": "Ankara"
     },
     {
-      "COUNTRY": "Saint Helena",
-      "CONTINENT": "Africa"
+      "Country": "Turkmenistan",
+      "Capital": "Ashgabat"
     },
     {
-      "COUNTRY": "Saint Kitts and Nevis",
-      "CONTINENT": "North & Central America"
+      "Country": "Tuvalu",
+      "Capital": "Funafuti[25]"
     },
     {
-      "COUNTRY": "Saint Lucia",
-      "CONTINENT": "North & Central America"
+      "Country": "Uganda",
+      "Capital": "Kampala"
     },
     {
-      "COUNTRY": "Saint Pierre and Miquelon",
-      "CONTINENT": "North & Central America"
+      "Country": "Ukraine",
+      "Capital": "Kyiv or Kiev"
     },
     {
-      "COUNTRY": "Saint Vincent and Grenadines",
-      "CONTINENT": "North & Central America"
+      "Country": "United Arab Emirates",
+      "Capital": "Abu Dhabi"
     },
     {
-      "COUNTRY": "Saint-Martin (French part)",
-      "CONTINENT": "North & Central America"
+      "Country": "United Kingdom",
+      "Capital": "London"
     },
     {
-      "COUNTRY": "Samoa",
-      "CONTINENT": "Australia/Oceania"
+      "Country": "United States",
+      "Capital": "Washington D.C."
     },
     {
-      "COUNTRY": "San Marino",
-      "CONTINENT": "Europe"
+      "Country": "Uruguay",
+      "Capital": "Montevideo"
     },
     {
-      "COUNTRY": "Sao Tome and Principe",
-      "CONTINENT": "Africa"
+      "Country": "Uzbekistan",
+      "Capital": "Tashkent"
     },
     {
-      "COUNTRY": "Saudi Arabia",
-      "CONTINENT": "Asia"
+      "Country": "Vanuatu",
+      "Capital": "Port Vila"
     },
     {
-      "COUNTRY": "Senegal",
-      "CONTINENT": "Africa"
+      "Country": "Vatican City",
+      "Capital": "Vatican City"
     },
     {
-      "COUNTRY": "Serbia",
-      "CONTINENT": "Europe"
+      "Country": "Venezuela",
+      "Capital": "Caracas"
     },
     {
-      "COUNTRY": "Seychelles",
-      "CONTINENT": "Africa"
+      "Country": "Vietnam",
+      "Capital": "Hanoi"
     },
     {
-      "COUNTRY": "Sierra Leone",
-      "CONTINENT": "Africa"
+      "Country": "Wales[26]",
+      "Capital": "Cardiff"
     },
     {
-      "COUNTRY": "Singapore",
-      "CONTINENT": "Asia"
+      "Country": "Yemen",
+      "Capital": "Sana'a[27]"
     },
     {
-      "COUNTRY": "Slovakia",
-      "CONTINENT": "Europe"
+      "Country": "Zambia",
+      "Capital": "Lusaka"
     },
     {
-      "COUNTRY": "Slovenia",
-      "CONTINENT": "Europe"
+      "Country": "Zimbabwe",
+      "Capital": "Harare"
     },
     {
-      "COUNTRY": "Solomon Islands",
-      "CONTINENT": "Australia/Oceania"
-    },
-    {
-      "COUNTRY": "Somalia",
-      "CONTINENT": "Africa"
-    },
-    {
-      "COUNTRY": "South Africa",
-      "CONTINENT": "Africa"
-    },
-    {
-      "COUNTRY": "South Georgia and the South Sandwich Isl",
-      "CONTINENT": "Antarctica"
-    },
-    {
-      "COUNTRY": "South Korea",
-      "CONTINENT": "Asia"
-    },
-    {
-      "COUNTRY": "South Sudan",
-      "CONTINENT": "Africa"
-    },
-    {
-      "COUNTRY": "Spain",
-      "CONTINENT": "Europe"
-    },
-    {
-      "COUNTRY": "Sri Lanka",
-      "CONTINENT": "Asia"
-    },
-    {
-      "COUNTRY": "Sudan",
-      "CONTINENT": "Africa"
-    },
-    {
-      "COUNTRY": "Suriname",
-      "CONTINENT": "South America"
-    },
-    {
-      "COUNTRY": "Svalbard and Jan Mayen Islands",
-      "CONTINENT": "Europe"
-    },
-    {
-      "COUNTRY": "Swaziland",
-      "CONTINENT": "Africa"
-    },
-    {
-      "COUNTRY": "Sweden",
-      "CONTINENT": "Europe"
-    },
-    {
-      "COUNTRY": "Switzerland",
-      "CONTINENT": "Europe"
-    },
-    {
-      "COUNTRY": "Syria",
-      "CONTINENT": "Asia"
-    },
-    {
-      "COUNTRY": "Taiwan",
-      "CONTINENT": "Asia"
-    },
-    {
-      "COUNTRY": "Tajikistan",
-      "CONTINENT": "Asia"
-    },
-    {
-      "COUNTRY": "Tanzania",
-      "CONTINENT": "Africa"
-    },
-    {
-      "COUNTRY": "Thailand",
-      "CONTINENT": "Asia"
-    },
-    {
-      "COUNTRY": "Togo",
-      "CONTINENT": "Africa"
-    },
-    {
-      "COUNTRY": "Tokelau",
-      "CONTINENT": "Australia/Oceania"
-    },
-    {
-      "COUNTRY": "Tonga",
-      "CONTINENT": "Australia/Oceania"
-    },
-    {
-      "COUNTRY": "Trinidad and Tobago",
-      "CONTINENT": "South America"
-    },
-    {
-      "COUNTRY": "Tunisia",
-      "CONTINENT": "Africa"
-    },
-    {
-      "COUNTRY": "Turkey",
-      "CONTINENT": "Asia,Europe"
-    },
-    {
-      "COUNTRY": "Turkmenistan",
-      "CONTINENT": "Asia"
-    },
-    {
-      "COUNTRY": "Turks and Caicos Islands",
-      "CONTINENT": "North & Central America"
-    },
-    {
-      "COUNTRY": "Tuvalu",
-      "CONTINENT": "Australia/Oceania"
-    },
-    {
-      "COUNTRY": "Uganda",
-      "CONTINENT": "Africa"
-    },
-    {
-      "COUNTRY": "Ukraine",
-      "CONTINENT": "Europe"
-    },
-    {
-      "COUNTRY": "United Arab Emirates",
-      "CONTINENT": "Asia"
-    },
-    {
-      "COUNTRY": "United Kingdom",
-      "CONTINENT": "Europe"
-    },
-    {
-      "COUNTRY": "United States Minor Outlying Islands",
-      "CONTINENT": "North & Central America"
-    },
-    {
-      "COUNTRY": "United States of America",
-      "CONTINENT": "North & Central America"
-    },
-    {
-      "COUNTRY": "Uruguay",
-      "CONTINENT": "South America"
-    },
-    {
-      "COUNTRY": "Uzbekistan",
-      "CONTINENT": "Asia"
-    },
-    {
-      "COUNTRY": "Vanuatu",
-      "CONTINENT": "Australia/Oceania"
-    },
-    {
-      "COUNTRY": "Vatican",
-      "CONTINENT": "Europe"
-    },
-    {
-      "COUNTRY": "Venezuela",
-      "CONTINENT": "South America"
-    },
-    {
-      "COUNTRY": "Vietnam",
-      "CONTINENT": "Asia"
-    },
-    {
-      "COUNTRY": "Virgin Islands, US",
-      "CONTINENT": "North & Central America"
-    },
-    {
-      "COUNTRY": "Wallis and Futuna Islands",
-      "CONTINENT": "Australia/Oceania"
-    },
-    {
-      "COUNTRY": "Western Sahara",
-      "CONTINENT": "Africa"
-    },
-    {
-      "COUNTRY": "Yemen",
-      "CONTINENT": "Asia"
-    },
-    {
-      "COUNTRY": "Zambia",
-      "CONTINENT": "Africa"
-    },
-    {
-      "COUNTRY": "Zimbabwe",
-      "CONTINENT": "Africa"
+      "Country": "201",
+      "Capital": "201"
     }
+
    ]

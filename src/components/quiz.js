@@ -2,130 +2,170 @@ import React, { useState, useEffect, useRef } from "react";
 import QuestionLabel from './questionLabel';
 import Footer from './footer';
 import Results from './results';
-import Select from './select';
+import SelectDropdown from "react-native-select-dropdown";
 import { quizData } from '../../assets/cities';
-import {View, Text, StyleSheet, Pressable, Modal, Alert, FlatList} from "react-native"
+import { View, Text, StyleSheet, Pressable, Modal, Alert, FlatList } from "react-native"
 const Quiz = () => {
     const [quizDataSet, setQuizDataSet] = useState({
-      Hint: "",
-      Place_name: "",
-      Meaning: ""
+        Country: "",
+        Capital: ""
     });
-  
-    const [selectValue, setSelectValue] = useState();
+
+    const [country, setCountry] = useState("");
+    const [capital, setCapital] = useState("");
+    const [selectedCapital, setSelectedCapital] = useState("");
     const [correctGuess, setCorrectGuess] = useState([]);
     const [incorrectGuess, setIncorrectGuess] = useState([]);
-    const [questionLabel, setQuestionLabel] = useState();
+    //const [questionLabel, setQuestionLabel] = useState();
+    const sortedQuizData = [...quizData].sort();
+    const capitalCityData = sortedQuizData.map((obj) => obj.Capital);
+    const sortedCapitalCitiesData = [...capitalCityData].sort();
     let UserGuess;
-  
+
     const handleGameStart = () => {
-      LoadSelectListData();
-      let randomNum = Math.floor(Math.random() * (quizData.length - 0 + 1)) + 0;
-      let randomQuizData = quizData[randomNum];
-      setQuizDataSet({ Place_name: randomQuizData.Place_name, Hint: randomQuizData.Hint, Meaning: randomQuizData.Meaning });
-      setQuestionLabel({ Place_name: quizData[randomNum].Place_name, Hint: quizData[randomNum].Hint });
+        LoadSelectListData();
+        let randomNum = Math.floor(Math.random() * (quizData.length - 0 + 1)) + 0;
+        let randomQuizData = quizData[randomNum];
+        setQuizDataSet({ Country: randomQuizData.Country, Capital: randomQuizData.Capital });
+        setCountry(randomQuizData.Country);
+        setCapital(randomQuizData.Capital);
+        //setQuestionLabel({ Country: quizData[randomNum].Country, Hint: quizData[randomNum].Country});
     }
-    const handleSelectValueChange = (event) => {
-      console.log('select value changed to: ', event.target.value);
-      UserGuess = event.target.value;
-  
-      let result = IsUserGuessCorrect({ guess: event.target.value, data: quizDataSet.Meaning });
-      //console.log('User guess is ', result);
-      if(result)
-      { 
-        QuizAlert({text: "Right Answer!", icon: "success", btnText: "Play again!"});
-        setCorrectGuess((correctGuess) => [
-          ...correctGuess,
-          '"' + quizDataSet.Place_name + '" means "' + event.target.value + '"'
-        ]);
-      }
-      else{
-        QuizAlert({text: "Wrong Answer. Try again!", icon: "error", btnText:"Try again!"});
-        setIncorrectGuess((incorrectGuess) => [
-          ...incorrectGuess,
-          '"' + quizDataSet.Place_name + '" does not mean "' + event.target.value + '"'
-        ]);
-      }
+    const handleSelectValueChange = (item, idx) => {
+        console.log('select value changed to: ', item);
+        UserGuess = item;
+        setSelectedCapital(item);
+
+        let result = IsUserGuessCorrect({ guess: item, data: capital });
+        //console.log('User guess is ', result);
+        if (result) {
+            //QuizAlert({ text: "Right Answer!", icon: "success", btnText: "Play again!" });
+            setCorrectGuess((correctGuess) => [
+                ...correctGuess,
+                item
+            ]);
+        }
+        else {
+            //QuizAlert({ text: "Wrong Answer. Try again!", icon: "error", btnText: "Try again!" });
+            setIncorrectGuess((incorrectGuess) => [
+                ...incorrectGuess,
+                item
+            ]);
+        }
     };
-  
+
     const LoadSelectListData = () => {
-      const selectList = quizData.map((item) => ({ value: item.Meaning, label: item.Meaning }));
-      const selectListSorted = [...selectList].sort((a, b) => (a.value > b.value ? 1 : -1));
-      setSelectValue(selectListSorted);
-  
+        const selectList = quizData.map((item) => ({ value: item.Capital, label: item.Capital }));
+        const selectListSorted = [...selectList].sort((a, b) => (a.value > b.value ? 1 : -1));
+        //setSelectValue(selectListSorted);
+
     };
-  
+
     const IsUserGuessCorrect = ({ guess, data }) => {
-      console.log('Correct Answer: ', data);
-      if (guess != null && guess === data) { return true; }
-      else { return false; }
+        console.log('Correct Answer: ', data);
+        if (guess != null && guess === data) { return true; }
+        else { return false; }
     };
-  
-    const QuizAlert = ({text, icon, btnText}) => {
-       Swal({
-        title: "Quiz Result",
-        text: text,
-        icon: icon,
-        button: btnText,
-      });
+
+    const QuizAlert = ({ text, icon, btnText }) => {
+        // Swal({
+        //     title: "Quiz Result",
+        //     text: text,
+        //     icon: icon,
+        //     button: btnText,
+        // });
     }
-  
+
     useEffect(() => {
-      //GetSelectListData();
+        //GetSelectListData();
     }, []);
-  
+
     return (
-    //   <div className="container-fluid">
-    //     <div className="row pt-5">
-    //       <div className="col-sm-6"></div>
-    //       <div className="col-sm-6"> <QuestionLabel props={questionLabel} /></div>
-    //     </div>
-    //     <div className="row">
-    //       <div className="col-sm-6">
-    //         <button className="btn btn-default btnSubmit" onClick={handleGameStart}>
-    //           Click here to choose a random place
-    //         </button>
-    //       </div>
-    //       <div className="col-sm-6 pt-5">
-    //         <Select placeHolder={"No Options"} value={selectValue} options={selectValue}
-    //           onChange={handleSelectValueChange} />
-    //       </div>
-    //     </div>
-    //     <Results correctGuess={correctGuess} incorrectGuess={incorrectGuess}/>
-    //     <Footer props={quizDataSet} />
-    //   </div>
-
-    <View style={quizStyles.container}>
-        <View style={quizStyles.questionLabel}>
-            <Pressable onPress={handleGameStart} style={quizStyles.questionBtn}>
-                <Text>Select a Random Country</Text>
-            </Pressable>
+        <View style={quizStyles.container}>
+            <View style={quizStyles.questionLabel}>
+                <Pressable onPress={handleGameStart} style={quizStyles.questionBtn}>
+                    <Text>Select a Random Country</Text>
+                </Pressable>
+                <View style={quizStyles.country}>
+                    <Text style={{ fontSize: 25, color: "#ffff" }}>{country}</Text>
+                </View>
+            </View>
+            {country && (
+                <View style={quizStyles.container}>
+                    <View>
+                        <Text style={{ fontSize: 16, color: "#ffff", textAlign: "center" }}>Select a capital city</Text>
+                    </View>
+                    <View style={quizStyles.dropdown}>
+                        <SelectDropdown data={sortedCapitalCitiesData} onSelect={handleSelectValueChange} />
+                    </View>
+                </View>
+            )}
+            {country && (
+                <View style={quizStyles.guessContainer}>
+                    <View>
+                        <View style={quizStyles.correctGuessContainer}>
+                            <Text style={{ fontSize: 14, color: "#000000", fontWeight: 'bold' }}>Correct Guess</Text>
+                            <FlatList data={correctGuess}
+                                        renderItem={({item}) => <Text style={{ fontSize: 14, color: "#0000FF" }}>{item}</Text>}
+                             />
+                        </View>
+                    </View>
+                    <View>
+                        <View style={quizStyles.incorrectGuessContainer}>
+                            <Text style={{ fontSize: 14, color: "#000000", fontWeight: 'bold' }}>Incorrect Guess</Text>
+                            <FlatList data={incorrectGuess}
+                                        renderItem={({item}) => <Text style={{ fontSize: 14, color: "#B22222" }}>{item}</Text>}
+                             />
+                        </View>
+                    </View>
+                </View>
+            )}
         </View>
-    </View>
-  
-    );
-  };
-  
 
-  const quizStyles = StyleSheet.create({
-    container:{
-        backgroundColor: "#111111",
-        flex : 1,
+    );
+};
+
+
+const quizStyles = StyleSheet.create({
+    container: {
+        backgroundColor: "#4169E1",
+        flex: 1,
         justifContent: "center",
         alignItems: "center"
     },
-    questionLabel:{
+    questionLabel: {
         alignItems: "center",
         flex: 5,
         justifyContent: "center"
     },
-    questionBtn:{
+    questionBtn: {
         alignItems: "center",
         flex: 1,
         justifyContent: "center",
         borderRadius: 8,
+        marginTop: 5,
         width: 275,
         padding: 10,
+        backgroundColor: "#FFFFFF",
+    },
+    country: {
+        flex: 8,
+        justifyContent: "center",
+        alignItems: "center"
+    },
+    guessContainer:{
+        flexDirection: "row",
+        margin: 8,
+        flex: 5,
+        width: 250
+    },
+    correctGuessContainer:{
+        margin: 18,
+        flex: 1
+    },
+    incorrectGuessContainer: {
+        margin: 18,
+        flex: 1
     }
-  });
-  export default Quiz;
+});
+export default Quiz;
