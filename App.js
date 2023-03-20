@@ -13,16 +13,30 @@ function HomeScreen() {
   </View>);
 }
 
+function WeatherApi(){
+  return(<View style={styles.container}>
+    <Text style={styles.text}>Weather Api</Text>
+    <StatusBar style="auto" />
+  </View>);
+}
+
+function WrongCityDatabase(){
+  return(<View style={styles.container}>
+    <Text style={styles.text}>Wrong City!</Text>
+    <StatusBar style="auto" />
+  </View>);
+}
+
 export default function App() {
   return (
     <NavigationContainer>
       <BottomTab.Navigator>
         <BottomTab.Screen name="Home" component={HomeScreen} />
-        {/* <BottomTab.Screen name="Settings" component={SettingsScreen} /> */}
+        <BottomTab.Screen name="Weather" component={WeatherApi} />
+        <BottomTab.Screen name="Database" component={WrongCityDatabase} />
       </BottomTab.Navigator>
     </NavigationContainer>
   )
-
   };
 
 
