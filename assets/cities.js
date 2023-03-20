@@ -1,4 +1,4 @@
-[
+export const quizData =[
     {
       "COUNTRY": "Afghanistan",
       "CONTINENT": "Asia"
