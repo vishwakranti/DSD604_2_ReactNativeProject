@@ -1,51 +1,40 @@
 import React, { useState, useEffect, useRef } from "react";
-import QuestionLabel from './questionLabel';
-import Footer from './footer';
-import Results from './results';
 import SelectDropdown from "react-native-select-dropdown";
 import { quizData } from '../../assets/cities';
 import { View, Text, StyleSheet, Pressable, Modal, Alert, FlatList } from "react-native"
-const Quiz = () => {
-    const [quizDataSet, setQuizDataSet] = useState({
-        Country: "",
-        Capital: ""
-    });
 
+const Quiz = () => {
     const [country, setCountry] = useState("");
     const [capital, setCapital] = useState("");
-    const [selectedCapital, setSelectedCapital] = useState("");
     const [correctGuess, setCorrectGuess] = useState([]);
     const [incorrectGuess, setIncorrectGuess] = useState([]);
-    //const [questionLabel, setQuestionLabel] = useState();
-    const sortedQuizData = [...quizData].sort();
-    const capitalCityData = sortedQuizData.map((obj) => obj.Capital);
-    const sortedCapitalCitiesData = [...capitalCityData].sort();
+    const [capitalCities, setCapitalCities] = useState([]);
+    const [modalVisible, setModalVisible] = useState({showModal: false, displayText: ""});
     let UserGuess;
 
     const handleGameStart = () => {
         LoadSelectListData();
         let randomNum = Math.floor(Math.random() * (quizData.length - 0 + 1)) + 0;
         let randomQuizData = quizData[randomNum];
-        setQuizDataSet({ Country: randomQuizData.Country, Capital: randomQuizData.Capital });
-        setCountry("What is the capital of " + randomQuizData.Country + "?");
+        setCountry(randomQuizData.Country);
         setCapital(randomQuizData.Capital);
     }
     const handleSelectValueChange = (item, idx) => {
-        console.log('select value changed to: ', item);
+        //console.log('select value changed to: ', item);
         UserGuess = item;
-        setSelectedCapital(item);
 
         let result = IsUserGuessCorrect({ guess: item, data: capital });
-        //console.log('User guess is ', result);
         if (result) {
-            //QuizAlert({ text: "Right Answer!", icon: "success", btnText: "Play again!" });
+            //console.log("Correct guess!");
+            setModalVisible({showModal: true, displayText: "Correct guess"});
             setCorrectGuess((correctGuess) => [
                 ...correctGuess,
                 item
             ]);
         }
         else {
-            //QuizAlert({ text: "Wrong Answer. Try again!", icon: "error", btnText: "Try again!" });
+            //console.log("incorrect guess!");
+            setModalVisible({showModal: true, displayText: item + " is not the capital of "+ country + ". Incorrect guess"});
             setIncorrectGuess((incorrectGuess) => [
                 ...incorrectGuess,
                 item
@@ -54,10 +43,9 @@ const Quiz = () => {
     };
 
     const LoadSelectListData = () => {
-        const selectList = quizData.map((item) => ({ value: item.Capital, label: item.Capital }));
-        const selectListSorted = [...selectList].sort((a, b) => (a.value > b.value ? 1 : -1));
-        //setSelectValue(selectListSorted);
-
+        const capitalSelectList = quizData.map((item) => (item.Capital));
+        const capitalSelectListSorted = [...capitalSelectList].sort();
+        setCapitalCities(capitalSelectListSorted);
     };
 
     const IsUserGuessCorrect = ({ guess, data }) => {
@@ -66,17 +54,8 @@ const Quiz = () => {
         else { return false; }
     };
 
-    const QuizAlert = ({ text, icon, btnText }) => {
-        // Swal({
-        //     title: "Quiz Result",
-        //     text: text,
-        //     icon: icon,
-        //     button: btnText,
-        // });
-    }
-
     useEffect(() => {
-        //GetSelectListData();
+        //setModalVisible({showModal: false, displayText: ""});
     }, []);
 
     return (
@@ -85,17 +64,43 @@ const Quiz = () => {
                 <Pressable onPress={handleGameStart} style={quizStyles.questionBtn}>
                     <Text>Select a Random Country</Text>
                 </Pressable>
-                <View style={quizStyles.country}>
-                    <Text style={{ fontSize: 25, color: "#ffff" }}>{country}</Text>
-                </View>
+                {country && (<View style={quizStyles.country}>
+                    <Text style={{ fontSize: 22, color: "#ffff" }}>What is the capital of {country}?</Text>
+                </View>)}
             </View>
+            <View style={modalStyles.centeredView}>
+      <Modal
+        animationType="slide"
+        transparent={true}
+        visible={modalVisible.showModal}
+        onRequestClose={() => {
+          //Alert.alert('Modal has been closed.');
+          setModalVisible({showModal:!modalVisible.showModal, displayText: ""});
+        }}>
+        <View style={modalStyles.centeredView}>
+          <View style={modalStyles.modalView}>
+            <Text style={modalStyles.modalText}>{modalVisible.displayText}</Text>
+            <Pressable
+              style={[modalStyles.button, modalStyles.buttonClose]}
+              onPress={() => setModalVisible({showModal:!modalVisible.showModal, displayText: ""})}>
+              <Text style={modalStyles.textStyle}>Hide Modal</Text>
+            </Pressable>
+          </View>
+        </View>
+      </Modal>
+      {/* <Pressable
+        style={[styles.button, styles.buttonOpen]}
+        onPress={() => setModalVisible(true)}>
+        <Text style={styles.textStyle}>Show Modal</Text>
+      </Pressable> */}
+    </View>
             {country && (
                 <View style={quizStyles.container}>
                     <View>
                         <Text style={{ fontSize: 16, color: "#ffff", textAlign: "center" }}>Select a capital city</Text>
                     </View>
                     <View style={quizStyles.dropdown}>
-                        <SelectDropdown data={sortedCapitalCitiesData} onSelect={handleSelectValueChange} />
+                        <SelectDropdown data={capitalCities} onSelect={handleSelectValueChange} />
                     </View>
                 </View>
             )}
@@ -139,13 +144,14 @@ const quizStyles = StyleSheet.create({
     },
     questionBtn: {
         alignItems: "center",
-        flex: 1,
+        flex: 4,
         justifyContent: "center",
         borderRadius: 8,
         marginTop: 5,
         width: 275,
         padding: 10,
         backgroundColor: "#FFFFFF",
+        height: 200
     },
     country: {
         flex: 8,
@@ -165,6 +171,51 @@ const quizStyles = StyleSheet.create({
     incorrectGuessContainer: {
         margin: 18,
         flex: 1
-    }
+    },
+    
+
+});
+
+const modalStyles = StyleSheet.create({centeredView: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 22,
+  },
+  modalView: {
+    margin: 20,
+    backgroundColor: 'white',
+    borderRadius: 20,
+    padding: 35,
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
+  },
+  button: {
+    borderRadius: 20,
+    padding: 10,
+    elevation: 2,
+  },
+  buttonOpen: {
+    backgroundColor: '#F194FF',
+  },
+  buttonClose: {
+    backgroundColor: '#2196F3',
+  },
+  textStyle: {
+    color: 'white',
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  modalText: {
+    marginBottom: 15,
+    textAlign: 'center',
+  },
 });
 export default Quiz;
