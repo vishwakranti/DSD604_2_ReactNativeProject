@@ -3,6 +3,7 @@ import { StyleSheet, Text, View,Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Quiz from "./src/components/quiz";
+import DbCities from "./src/components/db";
 const BottomTab = createBottomTabNavigator();
 
 function HomeScreen() {
@@ -33,7 +34,7 @@ export default function App() {
       <BottomTab.Navigator>
         <BottomTab.Screen name="Quiz" component={Quiz} />
         <BottomTab.Screen name="Weather" component={WeatherApi} />
-        <BottomTab.Screen name="Database" component={WrongCityDatabase} />
+        <BottomTab.Screen name="Database" component={DbCities} />
       </BottomTab.Navigator>
     </NavigationContainer>
   )
