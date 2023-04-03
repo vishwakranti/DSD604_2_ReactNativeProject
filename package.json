@@ -11,11 +11,12 @@
   "dependencies": {
     "@react-navigation/bottom-tabs": "^6.5.7",
     "expo": "~48.0.6",
+    "expo-sqlite": "~11.1.1",
     "expo-status-bar": "~1.4.4",
     "react": "18.2.0",
     "react-native": "0.71.3",
-    "react-native-select-dropdown": "^3.3.0",
-    "expo-sqlite": "~11.1.1"
+    "react-native-paper": "^5.5.2",
+    "react-native-select-dropdown": "^3.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"

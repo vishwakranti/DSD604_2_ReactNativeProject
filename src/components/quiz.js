@@ -1,16 +1,22 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import SelectDropdown from "react-native-select-dropdown";
 import { quizData } from '../../assets/cities';
-import { View, Text, StyleSheet, Pressable, Modal, Alert, FlatList } from "react-native"
+import { View, Text, StyleSheet, Pressable, Modal, FlatList } from "react-native"
+import * as Sqlite from "expo-sqlite";
 
 const Quiz = () => {
     const [country, setCountry] = useState("");
     const [capital, setCapital] = useState("");
+    const [selectedCapital, setSelectedCapital] = useState("");
     const [correctGuess, setCorrectGuess] = useState([]);
     const [incorrectGuess, setIncorrectGuess] = useState([]);
     const [capitalCities, setCapitalCities] = useState([]);
     const [modalVisible, setModalVisible] = useState({showModal: false, displayText: ""});
     let UserGuess;
+
+    //database
+    var db = Sqlite.openDatabase('Quiz.db');
+    const [dbCities, setDbCities] = useState([]);
 
     const handleGameStart = () => {
         LoadSelectListData();
@@ -22,7 +28,7 @@ const Quiz = () => {
     const handleSelectValueChange = (item, idx) => {
         //console.log('select value changed to: ', item);
         UserGuess = item;
-
+        setSelectedCapital(item);
         let result = IsUserGuessCorrect({ guess: item, data: capital });
         if (result) {
             //console.log("Correct guess!");
@@ -55,8 +61,26 @@ const Quiz = () => {
     };
 
     useEffect(() => {
-        //setModalVisible({showModal: false, displayText: ""});
-    }, []);
+        db.transaction(function (txn) {
+            if(selectedCapital){
+                txn.executeSql(
+                    "insert into cities (city) values (?)",
+                    [selectedCapital],
+                    function (tx, res) {
+                        console.log('item:', res.rows.length);
+                        var tmpCities = [...dbCities];
+                        tmpCities.push({id: res.insertId, city: selectedCapital});
+                        setDbCities(tmpCities);
+                    },
+                    (tx, error) => console.log("db error", error)
+                );
+            }
+            else{
+                console.log("No city found to add to database!");
+            }
+          });
+
+    }, [incorrectGuess]);
 
     return (
         <View style={quizStyles.container}>
