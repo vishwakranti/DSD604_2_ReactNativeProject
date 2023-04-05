@@ -12,11 +12,9 @@ Using a Select (a dropdown) shows a list of all the cities. The player has to pi
 
 The Database Screen:
 <img src="https://user-images.githubusercontent.com/87359394/229965362-f15aa7ed-fa90-4b68-8997-817ef7759063.jpg" width="300" height="600">
-<img src="" width="300" height="600">
-![WhatsApp Image 2023-04-05 at 14 27 08](https://user-images.githubusercontent.com/87359394/229965414-1ed7fe70-71ce-4389-a8a2-5a059e32e7e2.jpg)
+<img src="https://user-images.githubusercontent.com/87359394/229965414-1ed7fe70-71ce-4389-a8a2-5a059e32e7e2.jpg" width="300" height="600">
 The Navigation Screen:
-<img src="" width="300" height="600">
-![WhatsApp Image 2023-04-05 at 14 29 57](https://user-images.githubusercontent.com/87359394/229966108-bce1dba6-be48-482b-9495-7fcad06a2b05.jpg)
+<img src="https://user-images.githubusercontent.com/87359394/229966108-bce1dba6-be48-482b-9495-7fcad06a2b05.jpg" width="300" height="600">
 
 Coding outline
 This game will take a little planning.
